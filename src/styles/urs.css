@@ -1,0 +1,101 @@
+/* ---------- ওরশ ও নেওয়াজ সমূহ ---------- */
+.urs-group { margin-bottom: 3rem; scroll-margin-top: 5.5rem; }
+.urs-group:last-child { margin-bottom: 0; }
+.page-body .urs-group > h2 { margin-top: 2.5rem; }
+.page-body .intro + .urs-group > h2 { margin-top: 2rem; }
+
+/* তারিখ + বিবরণের তালিকা */
+.urs-list { list-style: none; margin: 0; padding: 0; }
+.urs-item {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: .35rem 1.5rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid #e3dcc6;
+}
+.urs-item:last-child { border-bottom: 1px solid #e3dcc6; }
+.urs-when { display: flex; align-items: baseline; gap: .55rem; min-width: 0; }
+.urs-no {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 700;
+  color: var(--brass);
+}
+.urs-date {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--green-deep);
+}
+.urs-what { min-width: 0; }
+.urs-what p { margin: 0; line-height: 1.95; overflow-wrap: anywhere; }
+
+.urs-list-compact .urs-item { grid-template-columns: 9.5rem minmax(0, 1fr); padding: .9rem 0; }
+.urs-list-compact .urs-date { font-size: 1.05rem; }
+
+/* ওরসের সময়ভিত্তিক ভাগ (সকাল/দ্বিপ্রহর/বিকাল) */
+.urs-slots { list-style: none; margin: .6rem 0 0; padding: 0; }
+.urs-slots li {
+  margin-top: .55rem;
+  padding: .25rem 0 .25rem 1rem;
+  border-left: 3px solid var(--brass);
+  line-height: 1.9;
+}
+.urs-slot-time { display: block; font-weight: 600; color: var(--green-deep); }
+
+.urs-note { margin-top: 1.75rem; }
+.urs-note p { margin: .4rem 0 0; line-height: 1.95; }
+.urs-count { color: #6b6a5c; font-size: .92rem; }
+
+/* নেয়াজ সারণি */
+.neyaz-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e3dcc6;
+}
+.neyaz-table thead th {
+  background: var(--green-deep);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+  padding: .7rem .9rem;
+}
+.neyaz-table tbody th,
+.neyaz-table td {
+  padding: .7rem .9rem;
+  border-top: 1px solid #ece6d2;
+  font-weight: 400;
+  vertical-align: top;
+}
+.neyaz-table tbody th { font-weight: 500; text-align: left; }
+.neyaz-table tbody tr:nth-child(even) { background: #fbf9f1; }
+.neyaz-table td:nth-child(2) { text-align: center; width: 5.5rem; color: #6f5416; font-weight: 600; }
+
+@media (max-width: 767.98px) {
+  .urs-item,
+  .urs-list-compact .urs-item { grid-template-columns: 1fr; }
+}
+
+/* মোবাইলে সারণি কার্ডের মতো সাজবে */
+@media (max-width: 575.98px) {
+  .neyaz-table,
+  .neyaz-table tbody,
+  .neyaz-table tr,
+  .neyaz-table tbody th,
+  .neyaz-table td { display: block; }
+  .neyaz-table thead {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+  }
+  .neyaz-table tr { padding: .75rem .9rem; border-top: 1px solid #ece6d2; }
+  .neyaz-table tr:first-child { border-top: 0; }
+  .neyaz-table tbody th,
+  .neyaz-table td { padding: .1rem 0; border: 0; }
+  .neyaz-table tbody th { font-weight: 600; color: var(--green-deep); margin-bottom: .25rem; }
+  .neyaz-table td {
+    display: flex; justify-content: space-between; gap: 1rem; text-align: right;
+  }
+  .neyaz-table td::before { content: attr(data-label); color: #6b6a5c; text-align: left; font-weight: 400; }
+  .neyaz-table td:nth-child(2) { width: auto; text-align: right; }
+}
