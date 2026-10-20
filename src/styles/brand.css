@@ -1,0 +1,26 @@
+/* ---------- লোগো (নেভবার ও ফুটার) ---------- */
+.brand-with-logo {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+/* লোগোটি চৌকো, কালো ব্যাকগ্রাউন্ডের — কোণ কাটা না পড়ে তাই গোল নয়, হালকা গোলকোণা ফ্রেম */
+.brand-logo,
+.footer-logo {
+  flex: none;
+  display: block;
+  object-fit: contain;
+  background: #000;
+  border: 2px solid var(--brass);
+  border-radius: .55rem;
+}
+.brand-logo { width: 52px; height: 52px; }
+
+.footer-identity { display: flex; align-items: center; gap: 1rem; }
+.footer-logo { width: 84px; height: 84px; }
+
+@media (max-width: 575.98px) {
+  .brand-logo { width: 44px; height: 44px; }
+  .footer-logo { width: 68px; height: 68px; }
+}

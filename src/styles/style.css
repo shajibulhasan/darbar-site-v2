@@ -530,7 +530,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 
 /* ---------- Footer: developer credit ---------- */
 .footer-bottom {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .35rem 1.5rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem 1.5rem;
 }
 .footer-bottom .footer-copy { margin: 0; }
 .site-footer a.dev-link { color: var(--gold-soft); font-weight: 500; }

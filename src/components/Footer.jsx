@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SITE_NAME } from '../data/site.js';
 import '../styles/footer.css';
+import '../styles/brand.css';
 
 const links = [
   { to: '/about', label: 'দরবার পরিচিতি' },
@@ -16,8 +17,13 @@ export default function Footer() {
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-5">
-            <p className="footer-brand">{SITE_NAME}</p>
-            <p className="footer-sub">রূহী আধ্যাত্মিক দরবার</p>
+            <div className="footer-identity">
+              <img className="footer-logo" src="/images/logo.jpeg" alt={SITE_NAME} width="72" height="72" loading="lazy" />
+              <div>
+                <p className="footer-brand">{SITE_NAME}</p>
+                <p className="footer-sub">রূহী আধ্যাত্মিক দরবার</p>
+              </div>
+            </div>
           </div>
 
           <div className="col-md-6 col-lg-4">
@@ -45,7 +51,7 @@ export default function Footer() {
         <hr />
         <div className="footer-bottom">
           <p className="footer-copy">© {SITE_NAME}। সর্বস্বত্ব সংরক্ষিত।</p>
-          <p className="footer-copy">
+          {/* <p className="footer-copy">
             Developed by{' '}
             <a
               href="https://www.millennium-solution.com"
@@ -55,9 +61,9 @@ export default function Footer() {
             >
               Millennium Solution
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
   );
-} 
+}

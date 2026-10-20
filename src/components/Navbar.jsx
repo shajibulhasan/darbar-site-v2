@@ -3,12 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import AppLink from './AppLink.jsx';
 import navigation from '../data/navigation.js';
 import { SITE_NAME } from '../data/site.js';
+import '../styles/brand.css';
 
 const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false); 
-  const [openIdx, setOpenIdx] = useState(null); 
+  const [menuOpen, setMenuOpen] = useState(false); // মোবাইলে হ্যামবার্গার মেনু
+  const [openIdx, setOpenIdx] = useState(null); // কোন ড্রপডাউন খোলা
   const rootRef = useRef(null);
   const { pathname } = useLocation();
 
@@ -36,8 +37,9 @@ export default function Navbar() {
     <header className="site-header" ref={rootRef}>
       <nav className="navbar navbar-expand-lg" aria-label="প্রধান মেনু">
         <div className="container">
-          <Link className="navbar-brand" to="/">
-            {SITE_NAME}
+          <Link className="navbar-brand brand-with-logo" to="/">
+            <img className="brand-logo" src="/images/logo.jpeg" alt="" width="44" height="44" />
+            <span>{SITE_NAME}</span>
           </Link>
 
           <button
