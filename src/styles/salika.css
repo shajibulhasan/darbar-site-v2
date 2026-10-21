@@ -1,0 +1,89 @@
+/* ---------- আদাবে সলীকা ও এবাদতে সেম্আ (পিডিএফ রিডার) ---------- */
+.salika-icon { width: 1.15rem; height: 1.15rem; flex: none; }
+
+.salika-card {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: #fff;
+  border: 1px solid #e3dcc6;
+  border-left: 4px solid var(--brass);
+  padding: 1.5rem;
+}
+.salika-cover {
+  flex: none;
+  width: 7rem; aspect-ratio: 2 / 3;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--green-deep);
+  color: var(--brass);
+  border: 2px solid var(--brass);
+  outline: 4px solid var(--green-deep);
+  outline-offset: -8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+}
+.salika-cover .salika-icon { width: 2.6rem; height: 2.6rem; }
+.salika-card-body { flex: 1; min-width: 0; }
+.salika-card-title {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 1.35rem; font-weight: 700; line-height: 1.6;
+  color: var(--green-deep);
+  margin: 0 0 .25rem;
+}
+.salika-card-meta { margin: 0 0 1rem; color: #6b6a5c; }
+
+.salika-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.salika-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .55rem 1.25rem;
+  border-radius: .3rem;
+  border: 1px solid var(--green-deep);
+  font-weight: 600; font-size: 1.05rem; line-height: 1.6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.salika-btn:focus-visible, .salika-tool:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.salika-btn-primary { background: var(--green-deep); color: #fff; }
+.salika-btn-primary:hover { background: #fff; color: var(--green-deep); }
+.salika-btn-outline { background: transparent; color: var(--green-deep); }
+.salika-btn-outline:hover { background: var(--green-deep); color: #fff; }
+
+/* পেজের ভেতরের রিডার */
+.salika-reader {
+  margin-top: 1.5rem;
+  border: 1px solid #e3dcc6;
+  background: #fff;
+  scroll-margin-top: 5rem;
+}
+.salika-reader-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: .5rem 1rem;
+  padding: .6rem .9rem;
+  background: var(--green-deep);
+  color: #fff;
+}
+.salika-reader-title { font-family: "Noto Serif Bengali", serif; font-weight: 700; }
+.salika-reader-tools { display: flex; flex-wrap: wrap; gap: .4rem; }
+.salika-tool {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .25rem .7rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: .3rem;
+  color: #fff; font-size: .95rem; text-decoration: none;
+  cursor: pointer;
+}
+.salika-tool:hover { background: rgba(255, 255, 255, .15); color: #fff; }
+.salika-tool .salika-icon { width: 1rem; height: 1rem; }
+.salika-frame {
+  display: block; width: 100%;
+  height: 80vh; min-height: 32rem;
+  border: 0; background: #e9e6da;
+}
+.salika-reader-fallback { margin: 0; padding: .7rem .9rem; font-size: .95rem; color: #6b6a5c; border-top: 1px solid #ece6d2; }
+
+@media (max-width: 575.98px) {
+  .salika-card { flex-direction: column; text-align: center; padding: 1.25rem 1rem; }
+  .salika-actions { justify-content: center; }
+  .salika-btn { flex: 1 1 100%; justify-content: center; }
+  .salika-tool span { display: none; }
+  .salika-tool { padding: .35rem .55rem; }
+}

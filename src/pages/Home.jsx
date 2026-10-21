@@ -6,7 +6,7 @@ import { SITE_NAME, committees, dayras } from '../data/site.js';
 
 const quickLinks = [
   { label: 'দরবার পরিচিতি', to: '/about' },
-  { label: 'আদাবে সলীকা ও এবাদতে সেম্আ', to: '#' },
+  { label: 'আদাবে সলীকা ও এবাদতে সেম্আ', to: '/adabe-salika' },
   { label: 'নুজুলী কিতাব সমূহ', to: '#' },
   { label: 'ওরশ ও নেওয়াজ সমূহ', to: '/urs-neyaz' },
 ];

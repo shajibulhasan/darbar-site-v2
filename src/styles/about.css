@@ -50,9 +50,37 @@
   padding-left: 1rem;
 }
 
+/* শুরুর গদ্য-লেখা (দরবার ইত্যাদি) */
+.page-body article > .about-group:first-child > h2 { margin-top: 0; }
+.about-prose p {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 1.08rem;
+  line-height: 2;
+  margin: 0 0 1rem;
+  overflow-wrap: anywhere;
+}
+.about-prose .prose-lead {
+  font-weight: 700;
+  color: var(--green-deep);
+  margin: 1.5rem 0 .5rem;
+}
+.about-prose .prose-center {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--green-deep);
+  margin: 1.5rem 0;
+}
+.ar-inline {
+  font-family: "Amiri", "Noto Naskh Arabic", "Scheherazade New", "Traditional Arabic", serif;
+  font-size: 1.2em;
+  unicode-bidi: isolate;
+}
+
 .about-count { color: #6b6a5c; font-size: .92rem; }
 
 @media (max-width: 575.98px) {
+  .about-prose p { font-size: 1.04rem; }
   .quote-item { grid-template-columns: 2rem minmax(0, 1fr); column-gap: .6rem; }
   .quote-no { font-size: 1.2rem; }
   .quote-text { font-size: 1.04rem; }
